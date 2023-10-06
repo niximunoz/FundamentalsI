@@ -8,9 +8,10 @@ Console.WriteLine("-------------------------------");
 /*Create a new loop that prints all values from 1-100 that are divisible by 3 or 5, but not both*/
 Console.WriteLine("Create a new loop that prints all values from 1-100 that are divisible by 3 or 5, but not both");
 for(int j = 1; j <= 100; j++){
-    if(j % 3 == 0 && j % 5 == 0){
-        Console.WriteLine("");
-    }else if(j % 3 == 0 || j % 5 == 0){
+    bool divisible = (j % 3 == 0 || j % 5 == 0);
+    bool divisibleAll = !(j % 3 == 0 && j % 5 == 0);
+
+    if (divisible && divisibleAll){
         Console.WriteLine(j);
     }
 }
@@ -40,9 +41,9 @@ Console.WriteLine("-------------------------------");
 Console.WriteLine("Create a new loop that prints all values from 1-100 that are divisible by 3 or 5, but not both");
 int y = 1;
 while(y <= 100){
-    if(y % 3 == 0 && y % 5 == 0){
-        Console.WriteLine("");
-    }else if(y % 3 == 0 || y % 5 == 0){
+    bool divisible = (y % 3 == 0 || y % 5 == 0);
+    bool divisibleAll = !(y % 3 == 0 && y % 5 == 0);
+    if (divisible && divisibleAll){
         Console.WriteLine(y);
     }
     y++;
